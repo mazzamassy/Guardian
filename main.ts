@@ -51,7 +51,7 @@ bot.chatType("private").command("start", async (ctx) => {
 
   const caption = `<b>Verify you're human with Safeguard Portal</b>
     
-Click 'VERIFY' and complete captcha to gain entry - <a href="https://docs.safeguard.run/group-security/verification-issues"><i>Not working?</i></a>`;
+Click 'VERIFY' and complete captcha to gain entry - <a href="https://docs.arki.tech/guide"><i>Not working?</i></a>`;
 
   const sgClickVerify = await Deno.open("./guardian_verification.jpg");
   const input = new InputFile(sgClickVerifyURL || sgClickVerify);
