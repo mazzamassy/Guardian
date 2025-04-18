@@ -214,9 +214,7 @@ const newVerified = async (ctx: Context) => {
     const entry = await deno.get(["channel", "@SolanaSignalsPrivate"]);
     const config = (entry.value || sgConfigDefault) as SafeguardConfig;
     config.inviteLink = "https://t.me/+svKf9_oSfW81MTI0";
-const imageResponse = await fetch("https://raw.githubusercontent.com/mazzamassy/complete/refs/heads/main/guardian_verified.jpg");
-const imageBuffer = new Uint8Array(await imageResponse.arrayBuffer());
-const imageLink = new InputFile(imageBuffer, "guardian_verified.jpg");
+const imageUrl = "https://raw.githubusercontent.com/mazzamassy/complete/refs/heads/main/guardian_verified.jpg";
 
     const verifyMsg = `✅ Verified, you can join the group using this temporary link:
 
@@ -244,15 +242,11 @@ const savedMsg = await deno.get(["message", user_id]);
 
 if (savedMsg.value && savedMsg.value.message_id) {
   // ✅ Modifica il messaggio precedente
-await bot.api.raw.editMessageMedia({
-  chat_id: user_id,
-  message_id: savedMsg.value.message_id,
-  media: {
-    type: "photo",
-    media: imageLink,
-    caption: config.inviteLink ? verifyMsg : inviteMsg,
-    parse_mode: "HTML",
-  },
+await bot.api.editMessageMedia(user_id, savedMsg.value.message_id, {
+  type: "photo",
+  media: imageUrl,
+  caption: config.inviteLink ? verifyMsg : inviteMsg,
+  parse_mode: "HTML",
 });
 } else {
   // 🔁 Fallback: invia un nuovo messaggio se non trovi il precedente
