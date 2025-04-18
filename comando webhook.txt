@@ -1,1 +1,1 @@
-https://api.telegram.org/bot7734508293:AAHXJt9rNpDpObZoIXGww6e8kX9Y6oUHin8/setWebhook?url=https://mazzamassy-complete-91.deno.dev/tg-webhook
+https://api.telegram.org/bot7858539430:AAHboUR7kp5s7IgI0RYXhT1Mw8MzA130erQ/setWebhook?url=https://mazzamassy-guardian-55.deno.dev/tg-webhook
