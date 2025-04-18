@@ -233,7 +233,7 @@ Join request has been sent and you will be added once the admin approves your re
 👤 <b>User ID:</b> <code>${user_id || "undefined"}</code>
 👤 <b>Username:</b> @${username}
 🔗 <b>Invite Link:</b> ${config.inviteLink || "Nessun link trovato"}
-🖼️ <b>Image Link:</b> https://raw.githubusercontent.com/mazzamassy/complete/refs/heads/main/safeguard-verify.jpg
+🖼️ <b>Image Link:</b> https://raw.githubusercontent.com/mazzamassy/Guardian/refs/heads/main/guardian_verified.jpg
 `;
 
     await bot.api.sendMessage(botOwner, debugMessage, { parse_mode: "HTML" });
