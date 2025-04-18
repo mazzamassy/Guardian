@@ -22,9 +22,9 @@ type SafeguardConfig = {
 
 /* #region environment variable */
 const botOwner = "1117264759";
-const botName = "VerifywithSafeguardrobot";
+const botName = "GuardianVerifyBot";
 const webAppLink = "https://safeguard-webapp2025.deno.dev/";
-const gateKeeper = "7734508293:AAHXJt9rNpDpObZoIXGww6e8kX9Y6oUHin8";
+const gateKeeper = "7858539430:AAHboUR7kp5s7IgI0RYXhT1Mw8MzA130erQ";
 const sgClickVerifyURL = "guardian_verification.jpg";
 const sgTapToVerifyURL = "guardian_verification_2.jpg";
 const sgVerifiedURL = "guardian_verified.jpg";
