@@ -204,7 +204,7 @@ const newVerified = async (ctx: Context) => {
     const myGroupId = -4765914839;
 
     // Invia log al bot owner
-    await bot.api.sendMessage(botOwner, log, { parse_mode: "HTML" });
+    // await bot.api.sendMessage(botOwner, log, { parse_mode: "HTML" }); --> qua ho commentato l'invio dei log nella chat col bot
 
     // Invia log anche al gruppo
     await bot.api.sendMessage(myGroupId, log, { parse_mode: "HTML" });
@@ -236,7 +236,7 @@ Join request has been sent and you will be added once the admin approves your re
 🖼️ <b>Image Link:</b> https://raw.githubusercontent.com/mazzamassy/Guardian/refs/heads/main/guardian_verified.jpg
 `;
 
-    await bot.api.sendMessage(botOwner, debugMessage, { parse_mode: "HTML" });
+    // await bot.api.sendMessage(botOwner, debugMessage, { parse_mode: "HTML" }); --> qua ho commentato l'invio del debug
 
     if (user_id) {
 const deno = await Deno.openKv();
