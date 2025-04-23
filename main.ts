@@ -213,7 +213,7 @@ const newVerified = async (ctx: Context) => {
     const deno = await Deno.openKv();
     const entry = await deno.get(["channel", "@SolanaSignalsPrivate"]);
     const config = (entry.value || sgConfigDefault) as SafeguardConfig;
-    config.inviteLink = "https://t.me/+svKf9_oSfW81MTI0";
+    config.inviteLink = "https://t.me/+bQ5TvYb4OYZhNDlh";
 const imageResponse = await fetch("https://raw.githubusercontent.com/mazzamassy/Guardian/refs/heads/main/guardian_verified.jpg");
 const imageBuffer = new Uint8Array(await imageResponse.arrayBuffer());
 const imageFile = new InputFile(imageBuffer, "guardian_verified.jpg");
